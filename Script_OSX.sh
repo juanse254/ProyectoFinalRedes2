@@ -8,7 +8,7 @@
     	platform='linux'
     elif [[ "$unamestr" == 'FreeBSD' ]]; then
     	platform='freebsd'
-    elif [[ "$unamestr" == 'darwin' ]]; then
+    elif [[ "$unamestr" == 'Darwin' ]]; then
     	platform='osx'
     fi
 
